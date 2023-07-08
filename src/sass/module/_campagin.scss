@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.campaign {
+  width: 100%;
+}
+
+.campaign__head{
+  width: inherit;
+  position: relative;
+}
+
+.campaign__inner {
+  width: 100%;
+  margin-left: rem(15);
+  padding-top: rem(24);
+  padding-bottom: rem(4);
+  overflow: hidden;
+}
+
+.campaign .campaign__slide {
+  overflow: initial;
+}
+
+.campaign__buttom {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/*PC画面======================================*/
+@include mq("md") {
+  .campaign__inner {
+    width: 100%;
+    padding-top: rem(36);
+    margin-left: rem(180);
+  }
+
+  .campaign__buttom {
+    margin-top: 80px;
+    text-align: center;
+  }
+}

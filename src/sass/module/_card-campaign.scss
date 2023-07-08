@@ -1,0 +1,199 @@
+@use "global" as *;
+
+/*campaignページのカード*/
+.card-campaign {
+    width: calc(280 / 360 * 100%);
+    list-style-type: none;
+}
+
+/*カードの画像*/
+
+.card-campaign__img {
+    width: 100%;
+    aspect-ratio: 280 / 188;
+    object-fit: cover;
+}
+
+/*カードコンテンツ*/
+.card-campaign__contents {
+    padding: rem(16) rem(16) rem(24) rem(16);
+}
+
+/*カードトップ*/
+.card-campaign__content-top {
+    display: flex;
+    flex-direction: column;
+    border-bottom: rem(1) solid $green_accent;
+    padding-bottom: rem(5);
+}
+
+/*カードタグ*/
+.card-campaign__tag {
+    width: fit-content;
+    padding: rem(3) rem(11);
+    border: 1px solid $green_accent;
+    color: $green_accent;
+    font-size: rem(12);
+    color: $green_accent;
+    font-weight: 400;
+    line-height: calc(22 / 12);
+    font-family: $second-font-family;
+    letter-spacing: 0em;
+}
+
+
+/*カードタイトル*/
+.card-campaign__content-title-wrap {
+    margin-top: rem(4);
+}
+
+.card-campaign__content-title {
+    font-size: rem(16);
+    color: $font_color;
+    font-weight: 500;
+    line-height: calc(24 / 16);
+    font-family: $second-font-family;
+    letter-spacing: 0em;
+}
+
+/*カード下部コメント*/
+.card-campaign__content-comment-wrap {
+    margin-top: rem(10);
+}
+
+.card-campaign__content-comment {
+    text-align: center;
+    font-size: rem(14);
+    color: $font_color;
+    font-weight: 400;
+    line-height: calc(24 / 14);
+    letter-spacing: 0em;
+}
+
+/*カード値段*/
+.card-campaign__price {
+    width: 100%;
+}
+
+.card-campaign__price-inner {
+    margin-top: rem(6);
+    padding-left: rem(20);
+    display: flex;
+}
+
+/*元値*/
+.card-campaign__price-before-wrap {
+    margin-top: rem(10);
+}
+
+.card-campaign__price-before {
+    font-size: rem(20);
+    color: $font_color;
+    font-weight: 700;
+    line-height: calc(20 / 20);
+    letter-spacing: 0em;
+    position: relative;
+    font-family: $fourth-font-family;
+}
+
+.card-campaign__price-before::before {
+    content: "";
+    width: 100%;
+    height: rem(3);
+    background-color: #C94800;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+
+/*値引き値*/
+.card-campaign__price-after {
+    font-size: rem(32);
+    color: $green_accent;
+    font-weight: 700;
+    line-height: calc(32 / 32);
+    letter-spacing: 0em;
+    padding-left: rem(18);
+    font-family: $fourth-font-family;
+    ;
+}
+
+
+
+/*PC画面======================================*/
+@include mq("md") {
+
+    /*カードコンテンツ*/
+    .card-campaign__contents {
+        padding: rem(24) rem(16) rem(40) rem(16);
+    }
+
+    /*カードタイトル*/
+    .card-campaign__content-title {
+        font-size: rem(16);
+        font-weight: 700;
+        line-height: calc(24 / 16);
+    }
+
+    /*カードタグ*/
+    .card-campaign__tag {
+        width: fit-content;
+        padding: rem(5) rem(15);
+        border: 1px solid $green_accent;
+        color: $green_accent;
+        font-size: rem(12);
+        color: $green_accent;
+        font-weight: 400;
+        line-height: calc(22 / 12);
+        font-family: $second-font-family;
+        letter-spacing: 0em;
+    }
+
+    /*カード下部コメント*/
+    .card-campaign__content-comment-wrap {
+        margin-top: rem(16);
+    }
+
+    .card-campaign__content-comment {
+        text-align: center;
+        font-size: rem(16);
+        color: $font_color;
+        font-weight: 400;
+        line-height: calc(24 / 16);
+        letter-spacing: 0em;
+    }
+
+    /*カードトップ*/
+    .card-campaign__content-top {
+        padding-bottom: rem(4);
+    }
+
+    /*カード値段*/
+    .card-campaign__price-inner {
+        padding-left: initial;
+        justify-content: center;
+        margin-top: rem(8);
+    }
+
+    /*元値*/
+    .card-campaign__price-before-wrap {
+        margin-top: rem(14);
+    }
+
+    .card-campaign__price-before {
+        font-size: rem(24);
+        font-weight: 700;
+        line-height: calc(24 / 24);
+    }
+
+    /*値引き値*/
+    .card-campaign__price-after {
+        font-size: rem(40);
+        font-weight: 700;
+        line-height: calc(40 / 40);
+        padding-left: rem(24);
+    }
+}

@@ -1,0 +1,6 @@
+@use "global" as *;
+
+.swiper-slide{
+    width: calc(280 / 260 *100%);
+    box-shadow: rem(0) rem(4) rem(4) 0 rgb(0, 0, 0,0.25);
+}

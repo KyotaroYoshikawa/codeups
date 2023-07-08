@@ -1,0 +1,26 @@
+@use "global" as *;
+
+
+/*PC画面======================================*/
+
+.swiper-button {
+    display: none;
+}
+
+@include mq("md") {
+    .swiper-button {
+        position: absolute;
+        top: 0;
+        right: rem(180);
+        display: flex;
+    }
+
+    .swiper-button__prev {
+        width: rem(80);
+    }
+
+    .swiper-button__next {
+        width: rem(80);
+        margin-left: rem(80);
+    }
+}

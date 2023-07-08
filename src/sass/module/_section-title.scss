@@ -1,0 +1,64 @@
+@use "global" as *;
+
+/*セクションブロック*/
+.section-title {
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*セクションのメインタイトル*/
+.section-title__main {
+    font-size: rem(32);
+    color: $font_color;
+    font-family: $base-font-family;
+    font-weight: 400;
+    line-height: calc(40 / 32);
+    letter-spacing: 0em;
+}
+
+/*フォントアクセントカラー*/
+.section-title__accent {
+    color: $green_accent;
+}
+
+/*セクションのスモールタイトル*/
+.section-title__small-wrap{
+    margin-top: rem(2);
+}
+.section-title__small {
+    font-size: rem(12);
+    color: $green_accent;
+    font-family: $second-font-family;
+    font-weight: 400;
+    line-height: calc(18 / 12);
+    letter-spacing: 0em;
+}
+
+
+/*PC画面======================================*/
+@include mq("md") {
+
+    /*セクションのメインタイトル*/
+    .section-title__main {
+        font-size: rem(40);
+        color: $font_color;
+        font-family: $base-font-family;
+        font-weight: 400;
+        line-height: calc(40 / 40);
+        letter-spacing: 0em;
+    }
+
+    /*セクションのスモールタイトル*/
+    .section-title__small-wrap{
+        margin-top: rem(6);
+    }
+    .section-title__small {
+        font-size: rem(12);
+        color: $green_accent;
+        font-family: $second-font-family;
+        font-weight: 400;
+        line-height: calc(18 / 12);
+        letter-spacing: 0em;
+    }
+}

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="robots" content="noindex" />
+  <!-- meta情報 -->
+  <title>CodeUps</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!-- ogp -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <!-- ファビコン -->
+  <link rel="icon" href="" />
+  <!--Googleフォント-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!--Gotu-->
+  <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
+  <!--Noto sans jp-->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <!--Noto serif jp-->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+  <!--Lato-->
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+  <!-- css -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="./assets/js/script.js"></script>
+  <!--swiper-->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner-sp menu js-active">
+      <div class="menu__inner">
+        <ul class="menu__block">
+          <li class="menu__item">キャンペーン</li>
+          <li class="menu__item">ライセンス取得</li>
+          <li class="menu__item">貸切体験ダイビング</li>
+          <li class="menu__item">ナイトダイビング</li>
+        </ul>
+      </div>
+    </div>
+    <div class="header__inner">
+      <div class="header__logo-wrap">
+          <picture class="header__logo">
+            <source srcset="./assets/images/header/CodeUps_pc.svg" media="(min-width: 1024px)" type="image/jpg">
+            <source srcset="./assets/images/header/CodeUps_sp.svg" media="(min-width: 768px)" type="image/png">
+            <img src="./assets/images/header/CodeUps_sp.svg" alt="ロゴ">
+          </picture>
+      </div>
+      <div class="header__navigation">
+        <div class="header__navigation-inner">
+          <ul class="header__navigation-block global-navigation">
+            <li class="global-navigation__item"><a class="global-navigation__link" href="#"><span class="global-navigation__en">Campaign</span><span class="global-navigation__jp">キャンペーン</span></a></li>
+            <li class="global-navigation__item"><a class="global-navigation__link" href="#"><span class="global-navigation__en">About us</span><span class="global-navigation__jp">私たちについて</span></a></li>
+            <li class="global-navigation__item"><a class="global-navigation__link" href="#"><span class="global-navigation__en">Information</span><span class="global-navigation__jp">ダイビング情報</span></a></li>
+            <li class="global-navigation__item"><a class="global-navigation__link" href="#"><span class="global-navigation__en">Blog</span><span class="global-navigation__jp">ブログ</span></a></li>
+            <li class="global-navigation__item"><a class="global-navigation__link" href="#"><span class="global-navigation__en">Voice</span><span class="global-navigation__jp">お客様の声</span></a></li>
+            <li class="global-navigation__item"><a class="global-navigation__link" href="#"><span class="global-navigation__en">Price</span><span class="global-navigation__jp">料金一覧</span></a></li>
+            <li class="global-navigation__item"><a class="global-navigation__link" href="#"><span class="global-navigation__en">FAQ</span><span class="global-navigation__jp">よくある質問</span></a></li>
+            <li class="global-navigation__item"><a class="global-navigation__link" href="#"><span class="global-navigation__en">Contact</span><span class="global-navigation__jp">お問合せ</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="header__hamburger">
+        <div class="header__hamburger-inner hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <section class="campaign">
+    <div class="campaign__head">
+      <div class="campaign__title-block section-title">
+        <h2 class="section-title__main"><span class="section-title__accent">C</span>ampaign</h2>
+        <div class="section-title__small-wrap">
+          <span class="section-title__small">キャンペーン</span>
+        </div>
+      </div>
+      <div class="campaign__swiper__button swiper-button">
+        <div class="swiper-button__prev js-swiper-button-prev">
+          <img src="./assets/images/top/button_left.png" alt="">
+        </div>
+        <div class="swiper-button__next js-swiper-button-next">
+          <img src="./assets/images/top/button_right.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="campaign__inner">
+      <div class="campaign__slide swiper js-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-wrapper__inner swiper-slide">
+            <div class="swiper-slide__inner card-campaign__img">
+              <img src="./assets/images/top/campaign1.png" alt="">
+            </div>
+            <div class="card-campaign__contents">
+              <div class="card-campaign__content-top">
+                <span class="card-campaign__tag">ライセンス講習</span>
+                <div class="card-campaign__content-title-wrap">
+                  <span class="card-campaign__content-title">ライセンス取得</span>
+                </div>
+              </div>
+              <div class="card-campaign__content-bottom">
+                <div class="card-campaign__content-comment-wrap">
+                  <p class="card-campaign__content-comment">全部コミコミ(お一人様)</p>
+                </div>
+                <div class="card-campaign__price">
+                  <div class="card-campaign__price-inner">
+                    <div class="card-campaign__price-before-wrap">
+                      <div class="card-campaign__price-before">¥56,000</div>
+                    </div>
+                    <div class="card-campaign__price-after">¥46,000</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-wrapper__inner swiper-slide">
+            <div class="card-campaign__img">
+              <img src="./assets/images/top/campaign2.png" alt="">
+            </div>
+            <div class="card-campaign__contents">
+              <div class="card-campaign__content-top">
+                <span class="card-campaign__tag">体験ダイビング</span>
+                <div class="card-campaign__content-title-wrap">
+                  <span class="card-campaign__content-title">貸切体験ダイビング</span>
+                </div>
+              </div>
+              <div class="card-campaign__content-bottom">
+                <div class="card-campaign__content-comment-wrap">
+                  <p class="card-campaign__content-comment">全部コミコミ(お一人様)</p>
+                </div>
+                <div class="card-campaign__price">
+                  <div class="card-campaign__price-inner">
+                    <div class="card-campaign__price-before-wrap">
+                      <div class="card-campaign__price-before">¥24,000</div>
+                    </div>
+                    <div class="card-campaign__price-after">¥18,000</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-wrapper__inner swiper-slide">
+            <div class="card-campaign__img">
+              <img src="./assets/images/top/campaign3.png" alt="">
+            </div>
+            <div class="card-campaign__contents">
+              <div class="card-campaign__content-top">
+                <span class="card-campaign__tag">体験ダイビング</span>
+                <div class="card-campaign__content-title-wrap">
+                  <span class="card-campaign__content-title">ナイトダイビング</span>
+                </div>
+              </div>
+              <div class="card-campaign__content-bottom">
+                <div class="card-campaign__content-comment-wrap">
+                  <p class="card-campaign__content-comment">全部コミコミ(お一人様)</p>
+                </div>
+                <div class="card-campaign__price">
+                  <div class="card-campaign__price-inner">
+                    <div class="card-campaign__price-before-wrap">
+                      <div class="card-campaign__price-before">¥10,000</div>
+                    </div>
+                    <div class="card-campaign__price-after">¥8,000</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-wrapper__inner swiper-slide">
+            <div class="card-campaign__img">
+              <img src="./assets/images/top/campaign4.png" alt="">
+            </div>
+            <div class="card-campaign__contents">
+              <div class="card-campaign__content-top">
+                <span class="card-campaign__tag">ファンダイビング</span>
+                <div class="card-campaign__content-title-wrap">
+                  <span class="card-campaign__content-title">貸切ファンダイビング</span>
+                </div>
+              </div>
+              <div class="card-campaign__content-bottom">
+                <div class="card-campaign__content-comment-wrap">
+                  <p class="card-campaign__content-comment">全部コミコミ(お一人様)</p>
+                </div>
+                <div class="card-campaign__price">
+                  <div class="card-campaign__price-inner">
+                    <div class="card-campaign__price-before-wrap">
+                      <div class="card-campaign__price-before">¥20,000</div>
+                    </div>
+                    <div class="card-campaign__price-after">¥16,000</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-wrapper__inner swiper-slide">
+            <div class="swiper-slide__inner card-campaign__img">
+              <img src="./assets/images/top/campaign1.png" alt="">
+            </div>
+            <div class="card-campaign__contents">
+              <div class="card-campaign__content-top">
+                <span class="card-campaign__tag">ライセンス講習</span>
+                <div class="card-campaign__content-title-wrap">
+                  <span class="card-campaign__content-title">ライセンス取得</span>
+                </div>
+              </div>
+              <div class="card-campaign__content-bottom">
+                <div class="card-campaign__content-comment-wrap">
+                  <p class="card-campaign__content-comment">全部コミコミ(お一人様)</p>
+                </div>
+                <div class="card-campaign__price">
+                  <div class="card-campaign__price-inner">
+                    <div class="card-campaign__price-before-wrap">
+                      <div class="card-campaign__price-before">¥56,000</div>
+                    </div>
+                    <div class="card-campaign__price-after">¥46,000</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-wrapper__inner swiper-slide">
+            <div class="card-campaign__img">
+              <img src="./assets/images/top/campaign2.png" alt="">
+            </div>
+            <div class="card-campaign__contents">
+              <div class="card-campaign__content-top">
+                <span class="card-campaign__tag">体験ダイビング</span>
+                <div class="card-campaign__content-title-wrap">
+                  <span class="card-campaign__content-title">貸切体験ダイビング</span>
+                </div>
+              </div>
+              <div class="card-campaign__content-bottom">
+                <div class="card-campaign__content-comment-wrap">
+                  <p class="card-campaign__content-comment">全部コミコミ(お一人様)</p>
+                </div>
+                <div class="card-campaign__price">
+                  <div class="card-campaign__price-inner">
+                    <div class="card-campaign__price-before-wrap">
+                      <div class="card-campaign__price-before">¥24,000</div>
+                    </div>
+                    <div class="card-campaign__price-after">¥18,000</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-wrapper__inner swiper-slide">
+            <div class="card-campaign__img">
+              <img src="./assets/images/top/campaign3.png" alt="">
+            </div>
+            <div class="card-campaign__contents">
+              <div class="card-campaign__content-top">
+                <span class="card-campaign__tag">体験ダイビング</span>
+                <div class="card-campaign__content-title-wrap">
+                  <span class="card-campaign__content-title">ナイトダイビング</span>
+                </div>
+              </div>
+              <div class="card-campaign__content-bottom">
+                <div class="card-campaign__content-comment-wrap">
+                  <p class="card-campaign__content-comment">全部コミコミ(お一人様)</p>
+                </div>
+                <div class="card-campaign__price">
+                  <div class="card-campaign__price-inner">
+                    <div class="card-campaign__price-before-wrap">
+                      <div class="card-campaign__price-before">¥10,000</div>
+                    </div>
+                    <div class="card-campaign__price-after">¥8,000</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-wrapper__inner swiper-slide">
+            <div class="card-campaign__img">
+              <img src="./assets/images/top/campaign4.png" alt="">
+            </div>
+            <div class="card-campaign__contents">
+              <div class="card-campaign__content-top">
+                <span class="card-campaign__tag">ファンダイビング</span>
+                <div class="card-campaign__content-title-wrap">
+                  <span class="card-campaign__content-title">貸切ファンダイビング</span>
+                </div>
+              </div>
+              <div class="card-campaign__content-bottom">
+                <div class="card-campaign__content-comment-wrap">
+                  <p class="card-campaign__content-comment">全部コミコミ(お一人様)</p>
+                </div>
+                <div class="card-campaign__price">
+                  <div class="card-campaign__price-inner">
+                    <div class="card-campaign__price-before-wrap">
+                      <div class="card-campaign__price-before">¥20,000</div>
+                    </div>
+                    <div class="card-campaign__price-after">¥16,000</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="campaign__buttom">
+      <a href="#" class="buttom">
+        <div class="buttom__main">View more</div>
+      </a>
+    </div>
+  </section>
+
+
+
+  <footer>
+
+  </footer>
+  <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+</body>
+
+</html>

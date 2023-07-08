@@ -1,0 +1,53 @@
+@use "global" as *;
+
+
+/*PC画面======================================*/
+@include mq("md") {
+
+    .header__navigation {
+        width: fit-content;
+    }
+
+    .header__navigation-inner {
+        width: inherit;
+    }
+
+    /*ナビゲーション*/
+    .global-navigation {
+        display: flex;
+        gap:  rem(40);
+    }
+
+    /*ナビゲーションアイテム*/
+    .global-navigation__item {
+        width: fit-content;
+    }
+
+    /*英語ナビゲーション*/
+    .global-navigation__en {
+        display: block;
+        font-size: rem(18);
+        color: $white;
+        font-weight: $regular;
+        line-height: calc(18 / 18);
+        letter-spacing: 0em;
+        white-space: nowrap;
+    }
+
+    /*日本語ナビゲーション*/
+    .global-navigation__jp {
+        font-size: rem(10);
+        color: $white;
+        font-weight: $regular;
+        line-height: calc(15 / 10);
+        letter-spacing: 0em;
+        white-space: nowrap;
+    }
+
+    /*ナビゲーションリンク*/
+    .global-navigation__link {
+        display: inline-block;
+        text-align: center;
+    }
+
+}

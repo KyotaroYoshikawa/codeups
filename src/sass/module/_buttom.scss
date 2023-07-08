@@ -1,0 +1,77 @@
+@use "global" as *;
+
+/*共通ボタン*/
+.buttom {
+    display: inline-block;
+    padding: 0 rem(4) rem(4) 0;
+    position: relative;
+}
+
+/*ボタンずらし枠*/
+.buttom::before {
+    content: "";
+    width: rem(202);
+    padding-top: rem(52);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 1px $green_accent solid;
+}
+
+.buttom__main {
+    width: rem(202);
+    padding: rem(16) rem(88) rem(16) rem(40);
+    color: $white;
+    font-size: rem(14);
+    font-weight: 400;
+    line-height: calc(22 / 14);
+    letter-spacing: 0em;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.buttom__main::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $green_accent;
+    transform: translateX(0);
+    transition: transform 0.2s;
+    z-index: -1;
+}
+/*ボタンホバー*/
+.buttom__main:hover::before {
+    transform: translateX(100%);
+}
+
+.buttom__main:hover{
+    color: $green_accent;
+    padding: rem(15) rem(87) rem(15) rem(39);
+    border: 1px $green_accent solid;
+
+}
+
+/*ボタン矢印*/
+.buttom__main::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: rem(22);
+    left: rem(122);
+    width: 100%;
+    max-width: rem(40);
+    aspect-ratio: 41 / 7;
+    background-image: url(../images/common/btn_arrow.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.buttom__main:hover::after{
+    background-image: url(../images/common/btn_arrow_accentgreen.png);
+
+}
