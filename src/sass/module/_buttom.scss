@@ -20,7 +20,7 @@
 
 .buttom__main {
     width: rem(202);
-    padding: rem(16) 0 rem(16) 0;
+    padding: rem(15) 0 rem(15) 0;
     color: $white;
     font-size: rem(14);
     font-weight: 400;
@@ -28,6 +28,7 @@
     letter-spacing: 0em;
     position: relative;
     overflow: hidden;
+    border: 1px $green_accent solid;
 }
 
 
@@ -51,9 +52,6 @@
 
 .buttom__main:hover{
     color: $green_accent;
-    padding: rem(15) rem(87) rem(15) rem(39);
-    border: 1px $green_accent solid;
-
 }
 
 /*ボタン矢印*/
