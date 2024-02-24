@@ -4,15 +4,19 @@
 .header {
     width: 100%;
     background-color: rgba(13, 41, 54, 0.68);
+    position: fixed;
+    z-index: 100;
 }
 
 //インナー
 .header__inner {
-    padding-top: rem(21);
-    padding-bottom: rem(21);
     padding-left: rem(15);
     padding-right: rem(15);
+    padding-top: rem(21);
+    padding-bottom: rem(21);
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header__navigation {
@@ -20,11 +24,14 @@
 }
 
 /*ハンバーガーメニュー*/
-.header__hamburger {
-    display: block;
-    width:  rem(32);
-}
 
+.header__hamburger{
+    display: block;
+    /*position: absolute;
+    top: rem(28);
+    right: rem(10);
+    z-index: 3;*/
+}
 
 /*PC画面======================================*/
 @include mq("md") {
@@ -35,23 +42,10 @@
         padding-bottom: rem(20);
         padding-left: rem(40);
         padding-right: rem(40);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    /*ロゴ*/
-    .header__logo-wrap {
-        width: rem(133);
     }
 
     /*ナビゲーション*/
     .header__navigation {
         display: block;
-    }
-
-    /*ハンバーガーメニュー*/
-    .header__hamburger {
-        display: none;
     }
 }

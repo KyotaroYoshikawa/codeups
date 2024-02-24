@@ -1,0 +1,21 @@
+@use "global" as *;
+
+/*ロゴ*/
+.logo {
+    display: block;
+    width: rem(102);
+    aspect-ratio: 102 / 38;
+    object-fit: cover;
+    height: auto;
+}
+
+/*PC画面======================================*/
+@include mq("md") {
+    /*ロゴ*/
+    .logo {
+        width: rem(133);
+        aspect-ratio: 133 / 50;
+        object-fit: cover;
+        height: auto;
+    }
+}

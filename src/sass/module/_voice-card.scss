@@ -1,0 +1,150 @@
+@use "global" as *;
+
+.voice-card{
+  width: 100%;
+  background-color: $white;
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+  font-family: $second-font-family;
+}
+
+.voice-card__inner{
+  padding: rem(16) rem(16) rem(24) rem(16);
+}
+
+.voice-card__head{
+  display: flex;
+  justify-content: space-between;
+  gap: rem(13);
+  align-items: flex-end;
+}
+
+.voice-card__head-block{
+  display: flex;
+  flex-direction: column;
+}
+
+.voice-card__tag{
+  display: inline-block;
+}
+
+.voice-card__tag-link{
+  display: inline-block;
+  padding: rem(3) rem(11);
+  font-size:  rem(12);
+  font-weight: $regular;
+  letter-spacing: 0em;
+  line-height: calc( 22 / 12 );
+  white-space: nowrap;
+  color: $green_accent;
+  border: 1px solid $green_accent;
+}
+
+.voice-card__img{
+  aspect-ratio: 151 / 117;
+  object-fit: cover;
+  height: auto;
+  margin-top: auto;
+  width: rem(151);
+}
+
+.voice-card__textbox{
+  margin-top: rem(16);
+}
+
+.voice-card__age{
+  font-size: rem(12);
+  color: $font_color;
+  font-weight: $regular;
+  line-height: calc( 18 / 12 );
+  letter-spacing: 0em;
+}
+
+.voice-card__title{
+  font-size:  rem(16);
+  font-weight: $medium;
+  letter-spacing: 0em;
+  line-height: calc( 23 / 16 );
+  padding-bottom: rem(3);
+  margin-top: rem(3);
+  border-bottom: 1px solid $green_accent;
+}
+
+.voice-card__text{
+  margin-top: rem(4);
+  font-size:  rem(16);
+  font-weight: $medium;
+  letter-spacing: 0em;
+  line-height: calc( 24 / 16 );
+  color: $font_color;
+}
+
+.voice-card__head-text{
+  width: rem(149);
+}
+
+
+
+
+/*PC画面======================================*/
+@include mq("md") {
+  .voice-card__inner{
+    padding: rem(24) rem(24) rem(24) rem(24);
+  }
+
+  .voice-card{
+    width: rem(520);
+  }
+
+  .voice-card__head{
+    flex-direction: row;
+    justify-content: space-between;
+    gap: rem(16);
+  }
+
+  .voice-card__head-block{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .voice-card__age{
+    padding-top: rem(16);
+  }
+
+  .voice-card__tag{
+    max-width:initial;
+  }
+
+  .voice-card__tag-link{
+    display: inline-block;
+    padding: rem(5) rem(15);
+  }
+
+  .voice-card__img{
+    width: rem(180);
+    aspect-ratio: 180 / 140;
+    object-fit: cover;
+    height: auto;
+  }
+
+  .voice-card__title{
+    font-size:  rem(24);
+    font-weight: $medium;
+    letter-spacing: 0em;
+    line-height: calc( 35 / 24 );
+    margin-top: rem(8);
+  }
+
+  .voice-card__textbox{
+    margin-top: rem(40);
+  }
+
+  .voice-card__text{
+    margin-top: rem(4);
+    line-height: calc( 24 / 16 );
+  }
+
+  .voice-card__head-text{
+    width: rem(276);
+  }
+
+}

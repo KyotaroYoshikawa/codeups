@@ -20,7 +20,7 @@
 
 .buttom__main {
     width: rem(202);
-    padding: rem(16) rem(88) rem(16) rem(40);
+    padding: rem(16) 0 rem(16) 0;
     color: $white;
     font-size: rem(14);
     font-weight: 400;
@@ -60,15 +60,13 @@
 .buttom__main::after {
     content: '';
     display: inline-block;
-    position: absolute;
-    top: rem(22);
-    left: rem(122);
     width: 100%;
     max-width: rem(40);
     aspect-ratio: 41 / 7;
     background-image: url(../images/common/btn_arrow.png);
     background-size: cover;
     background-repeat: no-repeat;
+    margin-left: rem(8);
 }
 
 .buttom__main:hover::after{

@@ -1,0 +1,31 @@
+@use "global" as *;
+
+/*共通ボタン*/
+.footer {
+    width: 100%;
+    background-color: $green_accent;
+}
+
+//インナー
+.footer__inner {
+    padding-top: rem(48);
+    padding-bottom: rem(56);
+    margin: 0 auto;
+    width: rem(345);
+}
+
+
+/*PC画面======================================*/
+@include mq("md") {
+
+    //インナー
+    .footer__inner {
+        padding-top: rem(80);
+        padding-bottom: rem(80);
+        width: 100%;
+        max-width: 1080px;
+    }
+
+
+
+}

@@ -1,0 +1,214 @@
+@use "global" as *;
+
+.top-contact{
+  width: 100%;
+}
+
+.top-contact__inner{
+  padding-left: $padding-sp;
+  padding-right: $padding-sp;
+  padding-top: rem(80);
+  padding-bottom: rem(96);
+}
+
+.top-contact__container{
+  position: relative;
+}
+
+.top-contact__container::before{
+  content: "";
+  position: absolute;
+  top: rem(-26);
+  right: 0;
+  display: block;
+  width: rem(109);
+  aspect-ratio: 109 / 50;
+  background-image: url(../images/top/top_contact_bg_sp.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+.top-contact__block{
+  width: 100%;
+  margin: 0 auto;
+  padding-left: rem(25);
+}
+
+.top-contact__item1{
+  width: 100%;
+  padding-right: rem(25);
+}
+
+.top-contact__item2{
+  width: 100%;
+  margin-top: rem(40);
+  margin-left: rem(-13);
+}
+
+.top-contact__title{
+  margin: 0 auto;
+  padding-bottom: rem(4);
+  border-bottom: 1px solid $green_accent;
+}
+
+.top-contact__title picture{
+  display: block;
+  margin: 0 auto;
+  width: rem(174);
+}
+
+.top-contact__address-textbox{
+  text-align: center;
+}
+
+.top-contact__address{
+  margin-top: rem(19);
+}
+
+.top-contact__address-text{
+  font-size:  rem(16);
+  font-weight: $regular;
+  letter-spacing: 0em;
+  line-height: calc( 24 / 16 );
+  font-family: $second-font-family;
+  margin-top: rem(4);
+}
+
+.top-contact__address-text:first-child{
+  margin-top: 0;
+}
+
+.top-contact__address-img{
+  margin-top: rem(13);
+}
+
+.top-contact__title picture{
+  width: rem(174);
+}
+
+.top-contact__comment{
+  font-size:  rem(14);
+  font-weight: $regular;
+  letter-spacing: 0em;
+  line-height: calc( 18 / 14 );
+  font-family: $second-font-family;
+  text-align: center;
+  margin-top: rem(4);
+  color: $green_accent;
+}
+
+.section-title__main.section-title__main--contact{
+  font-size:  rem(80);
+  font-weight: $regular;
+  letter-spacing: 0em;
+  line-height: calc( 80 / 80 );
+}
+
+.top-contact__button{
+  text-align: center;
+  margin-top: rem(40);
+}
+
+/*PC画面======================================*/
+@include mq("md") {
+
+  .top-contact__inner{
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
+    padding-top: rem(140);
+    padding-bottom: rem(160);
+  }
+
+  .top-contact__container{
+    width: 100%;
+    max-width: 1340px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .top-contact__container::before{
+    content: "";
+    top: rem(-40);
+    right: rem(-151);
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    display: block;
+    position: absolute;
+    width: rem(301);
+    aspect-ratio: 301 / 138;
+    background-image: url(../images/top/top_contact_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .top-contact__block{
+    width: 100%;
+    width: rem(1080);
+    margin: 0 auto;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(80) rem(112) rem(80) rem(50);
+    position: relative;
+  }
+
+  .top-contact__block::before{
+    content: "";
+    width: 1px;
+    height: calc(100% - rem(152));
+    position: absolute;
+    top: 51%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: $green_accent;
+  }
+
+  .top-contact__item1{
+    width: rem(440);
+    padding-right: 0;
+  }
+
+  .top-contact__item2{
+    width: rem(315);
+    margin-top: rem(6);
+  }
+
+  .top-contact__title{
+    padding-bottom: rem(8);
+  }
+
+  .top-contact__title picture{
+    width: rem(200);
+  }
+
+  .top-contact__address-img{
+    width: rem(273);
+    aspect-ratio: 273 / 148;
+    object-fit: cover;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .top-contact__address{
+    margin-top: rem(24);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .top-contact__border{
+    width: 1px;
+    height: 100%;
+    background-color: $green_accent;
+  }
+
+  .top-contact__address-text{
+    text-align: left;
+  }
+
+}

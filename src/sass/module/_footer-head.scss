@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.footer-head__logo{
+    width: rem(120);
+    aspect-ratio: 120 / 45;
+    object-fit: cover;
+    height: auto;
+}
+
+.footer-head__icon{
+    display: flex;
+    gap: rem(16);
+    margin-top: rem(16);
+}
+
+.footer-head__icon-facebook,.footer-head__icon-instagram{
+    width: rem(24);
+    aspect-ratio: 24 / 24;
+    object-fit: cover;
+    height: auto;
+}
+
+/*PC画面======================================*/
+@include mq("md") {
+    .footer-head{
+        display: flex;
+        gap: rem(40);
+    }
+
+    .footer-head__logo{
+        width: rem(200);
+        aspect-ratio: 200 / 75;
+    }
+
+    .footer-head__icon{
+        margin-top: rem(37);
+    }
+
+    .footer-head__icon-facebook,.footer-head__icon-instagram{
+        width: rem(32);
+        aspect-ratio: 32 / 32;
+    }
+}

@@ -1,0 +1,110 @@
+@use "global" as *;
+
+/*スマホ*/
+.menu{
+    width: 100%;
+}
+
+.menu__block-inner{
+    display: flex;
+    justify-content: space-between;
+    padding-top: rem(40);
+}
+
+.menu__item-block{
+    width: 100%;
+}
+
+.menu__item-block--2{
+    padding-left: rem(16);
+}
+
+.menu__item-wrap{
+    width: 100%;
+}
+/*テキスト*/
+.menu__item{
+    font-size: rem(16);
+    color: $white;
+    font-weight: $regular;
+    line-height: calc( 18 / 16 );
+    letter-spacing: 0em;
+    white-space: nowrap;
+    font-family: $second-font-family;
+    padding-left: rem(22);
+}
+
+.menu__item:not(.menu__item-point){
+    padding-top: rem(24);
+}
+
+/*ブロック毎の余白*/
+.menu__item-point-pt{
+    margin-top: rem(40);
+}
+
+/*ポイント*/
+.menu__item-point{
+    position: relative;
+    display: flex;
+    font-weight: $bold;
+}
+
+.menu__item-point::before{
+    content: "";
+    display: block;
+    max-width: rem(18);
+    width: 100%;
+    aspect-ratio: 36 / 36;
+    background-image: url(../images/menu/hitode.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu__copy{
+    font-size:  rem(12);
+    font-weight: $regular;
+    letter-spacing: 0em;
+    line-height: calc( 18 / 12 );
+    font-family: $base-font-family;
+    margin-top: rem(40);
+    text-align: center;
+    color: $white;
+    white-space: nowrap;
+}
+
+/*PC画面======================================*/
+@include mq("md") {
+    .menu__block-inner{
+        display: flex;
+        justify-content: initial;
+        gap: rem(120);
+        padding-top: rem(24);
+    }
+
+    .menu__item-block{
+        display: flex;
+        width: fit-content;
+        gap: rem(120);
+    }
+
+    .menu__item-block--2{
+        padding-left: 0;
+    }
+
+    .menu__item-wrap{
+        width: fit-content;
+    }
+
+    .menu__item-wrap > :first-child{
+        margin-top: 0;
+    }
+
+    .menu__copy{
+        margin-top: rem(80);
+        font-size:  rem(14);
+    }
+}

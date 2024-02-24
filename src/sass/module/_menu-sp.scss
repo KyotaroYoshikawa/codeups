@@ -1,0 +1,83 @@
+@use "global" as *;
+
+/*スマホ*/
+.menu-sp{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $green_accent;
+    z-index: 2;
+}
+
+.menu-sp__inner{
+    padding-left: rem(15);
+    padding-right: rem(15);
+    padding-top: rem(21);
+}
+
+.menu-sp__block-wrap{
+    width: 100%;
+    margin-top: rem(45);
+    padding-left: rem(22);
+    padding-right: rem(22);
+}
+
+.menu-sp__block-inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-sp__item-block{
+    width: 100%;
+}
+.menu-sp__item-block:nth-of-type(2){
+    padding-left: rem(29);
+}
+
+.menu-sp__item-wrap{
+    width: 100%;
+}
+/*テキスト*/
+.menu-sp__item{
+    font-size: rem(16);
+    color: $white;
+    font-weight: $regular;
+    line-height: calc( 18 / 16 );
+    letter-spacing: 0em;
+    white-space: nowrap;
+    font-family: $second-font-family;
+}
+
+.menu-sp__item:not(.menu-sp__item-point){
+    padding-top: rem(24);
+}
+
+/*ブロック毎の余白*/
+.menu-sp__item-point-pt{
+    margin-top: rem(40);
+}
+
+/*ポイント*/
+.menu-sp__item-point{
+    position: relative;
+    display: flex;
+    font-weight: $bold;
+}
+
+.menu-sp__item-point::before{
+    content: "";
+    display: block;
+    max-width: rem(18);
+    width: 100%;
+    aspect-ratio: 36 / 36;
+    background-image: url(../images/menu/hitode.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: rem(-22);
+}
+

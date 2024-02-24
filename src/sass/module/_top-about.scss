@@ -1,0 +1,193 @@
+@use "global" as *;
+
+.top-about{
+  width: 100%;
+}
+
+.top-about__inner{
+  width: 100%;
+  max-width: 1324px;
+  margin: 0 auto;
+  padding-left: $padding-sp;
+  padding-right: $padding-sp;
+  padding-top: rem(76);
+}
+
+/*PC画面*/
+@include mq("md") {
+  .top-about__inner{
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
+    padding-top: rem(136);
+  }
+}
+
+
+.top-about__container{
+  width: 100%;
+  padding-right: 0;
+  padding-bottom: 0;
+  position: initial;
+}
+
+
+/*PC画面*/
+@include mq("md") {
+  .top-about__container{
+    padding-right: 0;
+    padding-bottom: rem(91);
+    position: relative;
+  }
+}
+
+.top-about__container::after{
+  display: none;
+}
+
+
+/*PC画面*/
+@include mq("md") {
+  .top-about__container::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: rem(194);
+    aspect-ratio: 194 / 181;
+    background-image: url(../images/top/sango_isoginntyaku.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.top-about__content{
+  padding-top: rem(24);
+  position: relative;
+  margin: 0 auto;
+}
+
+/*PC画面*/
+@include mq("md") {
+  .top-about__content{
+    padding-top: rem(36);
+    padding-left: rem(97);
+    position: relative;
+  }
+}
+
+.top-about__front{
+  width: vw(375,128);
+  aspect-ratio: 128/194;
+}
+
+/*PC画面*/
+@include mq("md") {
+  .top-about__front{
+    width: rem(400);
+    aspect-ratio: 400/606;
+  }
+}
+
+.top-about__back{
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  margin-top: vw(375,-168);
+  padding-left: vw(375,64);
+  position: relative;
+  z-index: -1;
+}
+
+/*PC画面*/
+@include mq("md") {
+  .top-about__back{
+    max-width: 1080px;
+    margin-top: rem(-526);
+    padding-left: rem(151);
+    padding-right: rem(49);
+    position: relative;
+    z-index: -1;
+  }
+}
+
+.top-about__back img{
+  aspect-ratio: 880/581;
+  object-fit: cover;
+  height: auto;
+}
+
+.top-about__text-sentence-block{
+  width: 100%;
+  color: $white;
+  margin-top: rem(17);
+}
+
+
+/*PC画面*/
+@include mq("md") {
+  .top-about__text-sentence-block{
+    max-width: 400px;
+    margin-left: rem(40);
+    margin-top: 0;
+  }
+}
+
+.top-about__text-block{
+  margin-top: rem(40);
+  display: block;
+  color: $green_accent;
+}
+
+/*PC画面*/
+@include mq("md") {
+  .top-about__text-block{
+    margin-top: 0;
+    display: flex;
+    width: rem(840);
+    position: absolute;
+    top: rem(236);
+    left: rem(296);
+  }
+}
+
+.top-about__text-title h3{
+  font-size: rem(40);
+  font-weight: $regular;
+  font-family: $base-font-family;
+  letter-spacing: 0em;
+  line-height: calc( 40 / 40 );
+  white-space: nowrap;
+}
+
+/*PC画面*/
+@include mq("md") {
+  .top-about__text-title h3{
+    font-size: rem(80);
+    line-height: calc( 100 / 80 );
+    color: $white;
+  }
+}
+
+.top-about__text-sentence{
+  font-size: rem(16);
+  font-weight: $regular;
+  font-family: $second-font-family;
+  letter-spacing: 0em;
+  line-height: calc( 24 / 16 );
+  color: $font_color;
+}
+
+/*PC画面*/
+@include mq("md") {
+  .top-about__text-sentence{
+    line-height: calc( 24 / 16 );
+    color: $white;
+  }
+}
+
+.top-about__buttom{
+  margin-top: rem(40);
+  text-align: center;
+}
+

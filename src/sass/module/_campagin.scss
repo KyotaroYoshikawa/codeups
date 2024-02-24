@@ -4,13 +4,14 @@
   width: 100%;
 }
 
-.campaign__head{
+.campaign__head {
   width: inherit;
   position: relative;
+  padding-top: rem(40);
 }
 
 .campaign__inner {
-  width: 100%;
+  width: calc(100% - rem(15));
   margin-left: rem(15);
   padding-top: rem(24);
   padding-bottom: rem(4);
@@ -22,20 +23,25 @@
 }
 
 .campaign__buttom {
-  margin-top: 40px;
+  margin-top: rem(35);
   text-align: center;
 }
 
 /*PC画面======================================*/
 @include mq("md") {
+
+  .campaign__head {
+    padding-top: rem(120);
+  }
+
   .campaign__inner {
-    width: 100%;
+    width: calc(100% - rem(180));
     padding-top: rem(36);
     margin-left: rem(180);
   }
 
   .campaign__buttom {
-    margin-top: 80px;
+    margin-top: rem(76);
     text-align: center;
   }
 }

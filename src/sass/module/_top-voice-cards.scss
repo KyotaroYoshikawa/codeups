@@ -1,0 +1,56 @@
+@use "global" as *;
+
+.top-voice-cards{
+  width: 100%;
+}
+
+.top-voice-cards__inner{
+  padding-top: rem(40);
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+}
+
+/*PC画面======================================*/
+@include mq("md") {
+
+  .top-voice-cards{
+    width: rem(1080);
+    margin: 0 auto;
+  }
+
+  .top-voice-cards__inner{
+    padding-top: rem(26);
+    flex-direction: row;
+    position: relative;
+  }
+
+  .top-voice-cards__inner::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: rem(-190);
+    left: rem(-80);
+    width: rem(301);
+    aspect-ratio: 301 / 138;
+    background-image: url(../images/top/top_voice1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+
+  .top-voice-cards__inner:after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: rem(-205);
+    right: 0;
+    width: rem(71);
+    aspect-ratio: 71 / 162;
+    background-image: url(../images/top/top_voice2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+
+}

@@ -1,0 +1,106 @@
+@use "global" as *;
+
+.top-price{
+  width: 100%;
+  background-color: $green2;
+}
+
+.top-price__inner{
+  width: 100%;
+  margin: 0 auto;
+  padding-left: $padding-sp;
+  padding-right: $padding-sp;
+  padding-top: rem(80);
+  padding-bottom: rem(76);
+  margin-top: rem(76);
+}
+
+.top-price__img{
+  width: 100%;
+  aspect-ratio: 345 / 227;
+  object-fit: cover;
+  height: auto;
+}
+
+.top-price__button{
+  text-align: center;
+  margin-top: rem(40);
+  position: relative;
+  z-index: 2;
+}
+
+.top-price__container{
+  margin-top: rem(24);
+  margin: 0 auto;
+}
+
+.top-price-menu__text-block{
+  display: flex;
+  justify-content: space-between;
+  margin-top: rem(8);
+  font-size:  rem(14);
+  font-weight: $regular;
+  letter-spacing: 0em;
+  line-height: calc( 24 / 14 );
+  color: $font_color;
+}
+
+
+/*PC画面======================================*/
+@include mq("md") {
+
+
+  .top-price__inner{
+    width: rem(1270);
+    padding-top: rem(100);
+    padding-bottom: rem(96);
+    margin-top: rem(69);
+  }
+
+  .top-price__container{
+    width: rem(1080);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: rem(96);
+    position: relative;
+    margin-top: rem(36);
+  }
+
+  .top-price__container::before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: rem(-178);
+    left: rem(-79);
+    width: rem(437);
+    aspect-ratio: 437 / 201;
+    background-image: url(../images/top/top_price_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+
+  .top-price__img{
+    width: rem(492);
+    aspect-ratio: 492 / 746;
+    object-fit: cover;
+    height: auto;
+  }
+
+  .top-price-menu__text-block{
+    font-size:  rem(16);
+    font-weight: $regular;
+    letter-spacing: 0em;
+    line-height: calc( 24 / 16 );
+  }
+
+  .top-price__menu-block{
+    width: rem(492);
+  }
+
+  .top-price__button{
+    margin-top: rem(80);
+  }
+
+}

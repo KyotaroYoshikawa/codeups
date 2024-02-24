@@ -1,0 +1,108 @@
+@use "global" as *;
+
+.information{
+    width: 100%;
+    background-color: $green2;
+}
+
+.information__inner{
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+    padding-top: rem(80);
+    padding-bottom: rem(75);
+    margin-top: rem(76);
+}
+
+/*PC画面*/
+@include mq("md") {
+    .information__inner{
+        margin-top: rem(50);
+        padding-top: rem(99);
+        padding-bottom: rem(100);
+    }
+}
+
+.information__container{
+    margin-top: rem(24);
+}
+
+/*PC画面*/
+@include mq("md") {
+    .information__container{
+        width: 100%;
+        max-width: 1080px;
+        display: flex;
+        align-items: center;
+        gap: rem(48);
+        margin: 0 auto;
+        margin-top: rem(36);
+    }
+}
+
+.information__text-block{
+    margin-top: rem(24);
+}
+
+/*PC画面*/
+@include mq("md") {
+    .information__text-block{
+        margin-top: rem(6);
+    }
+}
+
+.information__title-wrap{
+    padding-bottom: rem(4);
+    border-bottom: 1px solid $green_accent;
+}
+
+/*PC画面*/
+@include mq("md") {
+    .information__title-wrap{
+        padding-bottom: rem(8);
+    }
+}
+
+.information__title{
+    font-size:  rem(20);
+    font-weight: $bold;
+    letter-spacing: 0em;
+    line-height: calc( 24 / 20 );
+    font-family: $second-font-family;
+}
+
+/*PC画面*/
+@include mq("md") {
+    .information__title{
+        font-size:  rem(24);
+        line-height: calc( 24 / 24 );
+    }
+}
+
+.information__text-wrap{
+    margin-top: rem(8);
+}
+
+.information__text{
+    font-size:  rem(16);
+    font-weight: $regular;
+    letter-spacing: 0em;
+    line-height: calc( 24 / 16 );
+    font-family: $second-font-family;
+}
+
+.information__button{
+    margin-top: rem(40);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/*PC画面*/
+@include mq("md") {
+    .information__image{
+        width: rem(540);
+    }
+    .information__text-block{
+        width: rem(492);
+    }
+}

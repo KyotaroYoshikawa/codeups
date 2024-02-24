@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.top-price-menu{
+  font-family: $second-font-family;
+}
+
+.top-price-menu__title{
+  padding-bottom: rem(3);
+  font-size:  rem(16);
+  font-weight: $bold;
+  letter-spacing: 0em;
+  line-height: calc( 24 / 16 );
+  border-bottom: 1px solid $green_accent;
+  color: $font_color;
+}
+
+.top-price__item{
+  margin-top: rem(40);
+}
+
+
+/*PC画面======================================*/
+@include mq("md") {
+  .top-price__item:first-child{
+    margin-top: 0;
+  }
+}

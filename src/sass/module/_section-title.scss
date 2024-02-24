@@ -35,6 +35,12 @@
     letter-spacing: 0em;
 }
 
+.section-title__small-wrap.section-title__small-wrap--contact{
+    margin-top: rem(-8);
+}
+
+
+
 
 /*PC画面======================================*/
 @include mq("md") {
@@ -42,17 +48,25 @@
     /*セクションのメインタイトル*/
     .section-title__main {
         font-size: rem(40);
-        color: $font_color;
         font-family: $base-font-family;
         font-weight: 400;
         line-height: calc(40 / 40);
         letter-spacing: 0em;
     }
 
+    .section-title--w .section-title__main {
+        color: $white;
+    }
+
+    .section-title--w .section-title__accent{
+        color: $green2;
+    }
+
     /*セクションのスモールタイトル*/
     .section-title__small-wrap{
         margin-top: rem(6);
     }
+
     .section-title__small {
         font-size: rem(12);
         color: $green_accent;
@@ -60,5 +74,13 @@
         font-weight: 400;
         line-height: calc(18 / 12);
         letter-spacing: 0em;
+    }
+
+    .section-title--w .section-title__small {
+        color: $white;
+    }
+
+    .section-title__small-wrap.section-title__small-wrap--contact{
+        margin-top: rem(-9);
     }
 }
