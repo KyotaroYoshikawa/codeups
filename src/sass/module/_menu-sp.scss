@@ -51,6 +51,11 @@
     font-family: $second-font-family;
 }
 
+.menu-sp__item a{
+    display: inline-block;
+    width: 100%;
+}
+
 .menu-sp__item:not(.menu-sp__item-point){
     padding-top: rem(24);
 }

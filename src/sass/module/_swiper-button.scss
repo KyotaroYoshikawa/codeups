@@ -23,4 +23,8 @@
         width: rem(80);
         margin-left: rem(80);
     }
+
+    .swiper-button__prev:hover,.swiper-button__next:hover {
+        cursor: pointer;
+    }
 }

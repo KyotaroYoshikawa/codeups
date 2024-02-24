@@ -11,6 +11,11 @@
     padding-top: rem(40);
 }
 
+.menu__item a{
+    display: inline-block;
+    width: 100%;
+}
+
 .menu__item-block{
     width: 100%;
 }
