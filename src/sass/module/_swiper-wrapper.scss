@@ -1,2 +1,9 @@
 @use "global" as *;
 
+.swiper-wrapper .swiper-wrapper__inner {
+    height: auto;
+}
+
+.swiper-wrapper__inner a:hover{
+    opacity: 0.7;
+}

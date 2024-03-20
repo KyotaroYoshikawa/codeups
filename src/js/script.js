@@ -4,7 +4,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $('.js-hamburger').on('click', function () {
         if ($('.hamburger').hasClass('active')) {
             $('.hamburger').removeClass('active');
-            $('.menu-sp').hide();
+            $('.menu-sp').fadeOut();
         } else {
             $('.hamburger').addClass('active');
             $('.menu-sp').fadeIn();
@@ -16,7 +16,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         const width = $(window).width();
         if (width >= 768 && $('.hamburger').hasClass('active')) {
             $('.hamburger').removeClass('active');
-            $('.menu-sp').hide();
+            $('.menu-sp').fadeOut();
         }
     });
 
@@ -33,7 +33,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     const swiper = new Swiper(".js-swiper", {
         loop: true, //繰り返しをする
         slidesPerView: 1.2635, // スライド数
-        spaceBetween: "24", // スライド間の余白
+        spaceBetween: "6.65%", // スライド間の余白
         // 前後の矢印
         navigation: {
             nextEl: ".js-swiper-button-prev",
@@ -42,7 +42,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         breakpoints: {
             768: {
                 slidesPerView: 3.485,  //769 は２枚
-                spaceBetween: "40", // スライド間の余白
+                spaceBetween: "3%", // スライド間の余白
             },
         }
     });

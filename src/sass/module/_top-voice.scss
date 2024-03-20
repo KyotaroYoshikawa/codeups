@@ -5,9 +5,9 @@
 }
 
 .top-voice__inner{
-  padding-left: $padding-sp;
-  padding-right: $padding-sp;
   padding-top: rem(76);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .top-voice__button{
@@ -19,18 +19,15 @@
 /*PC画面======================================*/
 @include mq("md") {
 
-
-  .top-voice__inner{
+  .top-voice{
     position: relative;
-    padding-top: rem(136);
-    padding-bottom: rem(67);
   }
 
-  /*.top-voice__inner::before{
+  .top-voice::before{
     content: '';
     display: block;
     position: absolute;
-    top: rem(20);
+    top: rem(17);
     left: rem(100);
     width: rem(301);
     aspect-ratio: 301 / 138;
@@ -40,19 +37,12 @@
     z-index: 1;
   }
 
-  .top-voice__inner::after{
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    right: rem(180);
-    width: rem(71);
-    aspect-ratio: 71 / 162;
-    background-image: url(../images/top/top_voice2.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 1;
-  }*/
+  .top-voice__inner{
+    position: relative;
+    padding-top: rem(136);
+    padding-bottom: rem(67);
+    max-width: initial;
+  }
 
   .top-voice__button{
     margin-top: rem(80);

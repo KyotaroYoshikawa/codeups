@@ -7,6 +7,11 @@
   font-family: $second-font-family;
 }
 
+.voice-card a:hover{
+  opacity: 0.7;
+  cursor: pointer;
+}
+
 .voice-card__inner{
   padding: rem(16) rem(16) rem(24) rem(16);
 }
@@ -40,11 +45,14 @@
 }
 
 .voice-card__img{
-  aspect-ratio: 151 / 117;
-  object-fit: cover;
   height: auto;
   margin-top: auto;
-  width: rem(151);
+  width: calc(151 / 313 * 100%);
+}
+
+.voice-card__img img{
+  aspect-ratio: 151 / 117;
+  object-fit: cover;
 }
 
 .voice-card__textbox{
@@ -79,7 +87,7 @@
 }
 
 .voice-card__head-text{
-  width: rem(149);
+  width: calc(149 / 313 * 100%);
 }
 
 
@@ -92,7 +100,8 @@
   }
 
   .voice-card{
-    width: rem(520);
+    width: 100%;
+    max-width: calc(50% - rem(20));
   }
 
   .voice-card__head{
@@ -121,9 +130,12 @@
 
   .voice-card__img{
     width: rem(180);
+    height: auto;
+  }
+
+  .voice-card__img img{
     aspect-ratio: 180 / 140;
     object-fit: cover;
-    height: auto;
   }
 
   .voice-card__title{

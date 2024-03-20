@@ -8,11 +8,10 @@
 .top-price__inner{
   width: 100%;
   margin: 0 auto;
-  padding-left: $padding-sp;
-  padding-right: $padding-sp;
   padding-top: rem(80);
   padding-bottom: rem(76);
   margin-top: rem(76);
+  max-width: 600px;
 }
 
 .top-price__img{
@@ -34,6 +33,10 @@
   margin: 0 auto;
 }
 
+.top-price-menu__text{
+  padding-right: rem(10);
+}
+
 .top-price-menu__text-block{
   display: flex;
   justify-content: space-between;
@@ -49,36 +52,41 @@
 /*PC画面======================================*/
 @include mq("md") {
 
+  .top-price{
+    position: relative;
+  }
 
   .top-price__inner{
-    width: rem(1270);
+    width: 100%;
     padding-top: rem(100);
     padding-bottom: rem(96);
     margin-top: rem(69);
-  }
-
-  .top-price__container{
-    width: rem(1080);
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    gap: rem(96);
+    max-width: initial;
     position: relative;
-    margin-top: rem(36);
   }
 
-  .top-price__container::before{
+  .top-price__inner::before {
     content: '';
     display: block;
     position: absolute;
-    bottom: rem(-178);
-    left: rem(-79);
+    bottom: rem(61);
+    left: calc(50% - min(50vw,rem(619)));
     width: rem(437);
     aspect-ratio: 437 / 201;
     background-image: url(../images/top/top_price_bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 1;
+  }
+
+  .top-price__container{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: rem(96);
+    position: relative;
+    margin-top: rem(36);
   }
 
   .top-price__img{

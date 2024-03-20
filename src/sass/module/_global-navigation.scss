@@ -4,18 +4,12 @@
 /*PC画面======================================*/
 @include mq("md") {
 
-    .header__navigation {
-        width: fit-content;
-    }
-
-    .header__navigation-inner {
-        width: inherit;
-    }
-
     /*ナビゲーション*/
     .global-navigation {
         display: flex;
         gap: rem(40);
+        height: inherit;
+        align-items: center;
     }
 
     /*ナビゲーションアイテム*/

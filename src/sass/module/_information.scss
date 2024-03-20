@@ -6,11 +6,11 @@
 }
 
 .information__inner{
-    padding-left: $padding-sp;
-    padding-right: $padding-sp;
     padding-top: rem(80);
     padding-bottom: rem(75);
     margin-top: rem(76);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /*PC画面*/
@@ -19,6 +19,7 @@
         margin-top: rem(50);
         padding-top: rem(99);
         padding-bottom: rem(100);
+        max-width: initial;
     }
 }
 
@@ -97,11 +98,24 @@
     z-index: 2;
 }
 
+.information__image img{
+    aspect-ratio: 345 / 227;
+    object-fit: cover;
+    height: auto;
+}
+
 /*PC画面*/
 @include mq("md") {
     .information__image{
         width: rem(540);
     }
+
+    .information__image img{
+        aspect-ratio: 540 / 356;
+        object-fit: cover;
+        height: auto;
+    }
+
     .information__text-block{
         width: rem(492);
     }

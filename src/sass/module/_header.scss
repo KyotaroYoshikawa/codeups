@@ -3,20 +3,25 @@
 /*共通ボタン*/
 .header {
     width: 100%;
+    height: rem(80);
     background-color: rgba(13, 41, 54, 0.68);
     position: fixed;
+    top: 0;
     z-index: 100;
 }
 
 //インナー
 .header__inner {
+    height: inherit;
     padding-left: rem(15);
     padding-right: rem(15);
-    padding-top: rem(21);
-    padding-bottom: rem(21);
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.header__inner a:hover{
+    opacity: 0.7;
 }
 
 .header__navigation {
@@ -27,19 +32,18 @@
 
 .header__hamburger{
     display: block;
-    /*position: absolute;
-    top: rem(28);
-    right: rem(10);
-    z-index: 3;*/
 }
 
 /*PC画面======================================*/
 @include mq("md") {
 
+    /*共通ボタン*/
+    .header {
+        height: rem(90);
+    }
+
     //インナー
     .header__inner {
-        padding-top: rem(20);
-        padding-bottom: rem(20);
         padding-left: rem(40);
         padding-right: rem(40);
     }
@@ -47,5 +51,12 @@
     /*ナビゲーション*/
     .header__navigation {
         display: block;
+        width: fit-content;
+        height: 100%;
+    }
+
+    .header__navigation-inner {
+        width: inherit;
+        height: inherit;
     }
 }

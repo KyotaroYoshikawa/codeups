@@ -30,9 +30,11 @@
 .first-view__main-title{
     width: fit-content;
     position: absolute;
-    top: rem(293);
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     z-index: 1;
 }
 
@@ -40,10 +42,6 @@
 @include mq("md") {
     .first-view__main-title{
         width: fit-content;
-        position: absolute;
-        top: rem(360);
-        left: 50%;
-        transform: translateX(-50%);
         z-index: 2;
     }
 }

@@ -5,28 +5,14 @@
 }
 
 .top-contact__inner{
-  padding-left: $padding-sp;
-  padding-right: $padding-sp;
   padding-top: rem(80);
   padding-bottom: rem(96);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .top-contact__container{
   position: relative;
-}
-
-.top-contact__container::before{
-  content: "";
-  position: absolute;
-  top: rem(-26);
-  right: 0;
-  display: block;
-  width: rem(109);
-  aspect-ratio: 109 / 50;
-  background-image: url(../images/top/top_contact_bg_sp.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 2;
 }
 
 .top-contact__block{
@@ -73,6 +59,7 @@
   line-height: calc( 24 / 16 );
   font-family: $second-font-family;
   margin-top: rem(4);
+  font-style: normal;
 }
 
 .top-contact__address-text:first-child{
@@ -81,6 +68,12 @@
 
 .top-contact__address-img{
   margin-top: rem(13);
+}
+
+.top-contact__address-img img{
+  aspect-ratio: 295 / 160;
+  object-fit: cover;
+  height: auto;
 }
 
 .top-contact__title picture{
@@ -113,11 +106,28 @@
 /*PC画面======================================*/
 @include mq("md") {
 
+  .top-contact{
+    position: relative;
+  }
+
+  .top-contact::before{
+    content: "";
+    top: rem(86);
+    right: rem(50);
+    display: block;
+    position: absolute;
+    width: rem(301);
+    aspect-ratio: 301 / 138;
+    background-image: url(../images/top/top_contact_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateY(10%);
+  }
+
   .top-contact__inner{
-    padding-left: $padding-pc;
-    padding-right: $padding-pc;
     padding-top: rem(140);
     padding-bottom: rem(160);
+    max-width: initial;
   }
 
   .top-contact__container{
@@ -127,25 +137,8 @@
     position: relative;
   }
 
-  .top-contact__container::before{
-    content: "";
-    top: rem(-40);
-    right: rem(-151);
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    display: block;
-    position: absolute;
-    width: rem(301);
-    aspect-ratio: 301 / 138;
-    background-image: url(../images/top/top_contact_bg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
   .top-contact__block{
     width: 100%;
-    width: rem(1080);
     margin: 0 auto;
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
     display: flex;
@@ -189,10 +182,13 @@
 
   .top-contact__address-img{
     width: rem(273);
+    margin-top: 0;
+  }
+
+  .top-contact__address-img img{
     aspect-ratio: 273 / 148;
     object-fit: cover;
     height: auto;
-    margin-top: 0;
   }
 
   .top-contact__address{

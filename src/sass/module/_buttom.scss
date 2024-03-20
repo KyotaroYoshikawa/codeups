@@ -3,7 +3,6 @@
 /*共通ボタン*/
 .buttom {
     display: inline-block;
-    padding: 0 rem(4) rem(4) 0;
     position: relative;
 }
 
@@ -13,13 +12,13 @@
     width: rem(202);
     padding-top: rem(52);
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: rem(-4);
+    right: rem(-4);
     border: 1px $green_accent solid;
 }
 
 .buttom__main {
-    width: rem(202);
+    width: rem(200);
     padding: rem(15) 0 rem(15) 0;
     color: $white;
     font-size: rem(14);
@@ -28,7 +27,7 @@
     letter-spacing: 0em;
     position: relative;
     overflow: hidden;
-    border: 1px $green_accent solid;
+    border: 1px #408F95 solid;
 }
 
 
@@ -52,6 +51,9 @@
 
 .buttom__main:hover{
     color: $green_accent;
+    background-color: $white;
+    transform: translateX(0);
+    transition: transform 0.2s;
 }
 
 /*ボタン矢印*/
