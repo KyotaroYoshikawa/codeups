@@ -1,34 +1,25 @@
-
+on: push
 name: Deploy website on push
-
-on:
-    push:
-        branches: [main]
-    pull_request:
-        branches: [main]
 jobs:
-    deploy:
-        name: Deploy
-        runs-on: ubuntu-latest
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get latest code
+      uses: actions/checkout@v4
 
-        steps:
-            - name: Get latest code
-            uses: actions/checkout@v2
-            ああああ
+    - name: Use Node.js 16
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
 
-            - name: Use Node.js 16
-            uses: actions/setup-node@v2
-            with:
-                node-version: '16'
+    - name: Build Project
+      run: |
+        npm install
+        npm run build
 
-            - name: Build Project
-            run: |
-                npm install
-                npm run build
-            working-directory: gulp
-
-            - name: Sync files
-            uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+    - name: Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
             with:
                 server: ${{ secrets.MY_FTP_SERVER }}
                 username: ${{ secrets.MY_FTP_USERNAME }}
