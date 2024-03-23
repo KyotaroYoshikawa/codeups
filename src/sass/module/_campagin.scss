@@ -2,6 +2,7 @@
 
 .campaign {
   width: 100%;
+  overflow-x: hidden;
 }
 
 .campaign__block{
@@ -17,9 +18,10 @@
 
 .campaign__inner {
   margin-right: calc(50% - 50vw);
-  padding-top: rem(24);
+  left: 50%;
+  transform: translateX(-8px);
+  padding-top: rem(29);
   padding-bottom: rem(4);
-  overflow: hidden;
 }
 
 .campaign .campaign__slide {
@@ -43,7 +45,7 @@
   }
 
   .campaign__inner {
-    padding-top: rem(36);
+    padding-top: rem(42);
   }
 
   .campaign__buttom {

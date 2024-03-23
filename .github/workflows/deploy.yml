@@ -1,0 +1,38 @@
+
+on:
+    name: Deploy
+    push:
+        branches:
+        - main
+    pull_request:
+        branches:
+        - main
+    jobs:
+        #テスト環境
+        test:
+            name: Upload Staging
+            runs-on: ubuntu-latest
+            steps:
+            - uses: actions/checkout@master
+            - name: Upload Staging
+                uses: SamKirkland/FTP-Deploy-Action@4.3.0
+                with:
+                    server: ${{ secrets.MY_FTP_SERVER }}
+                    username: ${{ secrets.MY_FTP_USERNAME }}
+                    password: ${{ secrets.MY_FTP_PASSWORD }}
+                    server-dir: ./codeups/
+                    local-dir: ./dist/
+        #本番環境
+        #production:
+        #    name: Upload Production
+        #    runs-on: ubuntu-latest
+        #    steps:
+        #    - uses: actions/checkout@master
+        #    - name: Upload Production
+        #    uses: SamKirkland/FTP-Deploy-Action@2.0.0
+        #    env:
+        #        FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        #        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        #        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        #        LOCAL_DIR: ./
+        #        REMOTE_DIR: /public_html/

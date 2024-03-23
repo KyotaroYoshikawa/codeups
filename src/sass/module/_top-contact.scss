@@ -87,7 +87,7 @@
   line-height: calc( 18 / 14 );
   font-family: $second-font-family;
   text-align: center;
-  margin-top: rem(4);
+  margin-top: rem(8);
   color: $green_accent;
 }
 
@@ -100,7 +100,7 @@
 
 .top-contact__button{
   text-align: center;
-  margin-top: rem(40);
+  margin-top: rem(43);
 }
 
 /*PC画面======================================*/
@@ -169,7 +169,7 @@
 
   .top-contact__item2{
     width: rem(315);
-    margin-top: rem(6);
+    margin-top: 0;
   }
 
   .top-contact__title{
@@ -205,6 +205,10 @@
 
   .top-contact__address-text{
     text-align: left;
+  }
+
+  .top-contact__button{
+    margin-top: rem(40);
   }
 
 }
