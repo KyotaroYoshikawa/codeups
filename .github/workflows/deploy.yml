@@ -15,9 +15,9 @@ jobs:
 
     - name: Build Project
       run: |
-        cd _gulp
         npm install
         npm run gulp build
+      working-directory: _gulp
 
     - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
