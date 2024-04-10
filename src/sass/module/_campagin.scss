@@ -1,8 +1,7 @@
 @use "global" as *;
 
 .campaign {
-  width: 100%;
-  overflow-x: hidden;
+  margin-top: rem(40);
 }
 
 .campaign__block{
@@ -13,15 +12,13 @@
 .campaign__head {
   width: inherit;
   position: relative;
-  padding-top: rem(40);
 }
 
 .campaign__inner {
   margin-right: calc(50% - 50vw);
-  left: 50%;
-  transform: translateX(-8px);
-  padding-top: rem(29);
+  margin-top: rem(29);
   padding-bottom: rem(4);
+  overflow: hidden;
 }
 
 .campaign .campaign__slide {
@@ -36,16 +33,16 @@
 /*PC画面======================================*/
 @include mq("md") {
 
+  .campaign {
+    margin-top: rem(120);
+  }
+
   .campaign__block{
     max-width: initial;
   }
 
-  .campaign__head {
-    padding-top: rem(120);
-  }
-
   .campaign__inner {
-    padding-top: rem(42);
+    margin-top: rem(42);
   }
 
   .campaign__buttom {

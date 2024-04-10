@@ -1,11 +1,10 @@
 @use "global" as *;
 
 .top-voice{
-  width: 100%;
+  margin-top: rem(76);
 }
 
 .top-voice__inner{
-  padding-top: rem(76);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -21,13 +20,14 @@
 
   .top-voice{
     position: relative;
+    margin-top: rem(134);
   }
 
   .top-voice::before{
     content: '';
     display: block;
     position: absolute;
-    top: rem(17);
+    top: rem(-120);
     left: rem(100);
     width: rem(301);
     aspect-ratio: 301 / 138;
@@ -39,8 +39,6 @@
 
   .top-voice__inner{
     position: relative;
-    padding-top: rem(136);
-    padding-bottom: rem(67);
     max-width: initial;
   }
 

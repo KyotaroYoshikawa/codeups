@@ -8,7 +8,7 @@
 .menu__block-inner{
     display: flex;
     justify-content: space-between;
-    padding-top: rem(40);
+    margin-top: rem(40);
 }
 
 .menu__item a{
@@ -40,7 +40,7 @@
 }
 
 .menu__item:not(.menu__item-point){
-    padding-top: rem(24);
+    margin-top: rem(24);
 }
 
 /*ブロック毎の余白*/
@@ -87,7 +87,7 @@
         display: flex;
         justify-content: initial;
         gap: rem(120);
-        padding-top: rem(24);
+        margin-top: rem(24);
     }
 
     .menu__item-block{

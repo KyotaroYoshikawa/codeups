@@ -1,21 +1,25 @@
 @use "global" as *;
 
 .top-about {
-  width: 100%;
-  overflow-x: hidden;
+  margin-top: rem(76);
+}
+
+/*PC画面*/
+@include mq("md") {
+  .top-about {
+    margin-top: rem(140);
+  }
 }
 
 .top-about__inner {
-  width: inherit;
+  width: 100%;
   margin: 0 auto;
-  padding-top: rem(76);
   max-width: 600px;
 }
 
 /*PC画面*/
 @include mq("md") {
   .top-about__inner {
-    padding-top: rem(136);
     position: relative;
     max-width: initial;
   }
@@ -32,9 +36,8 @@
     content: '';
     display: block;
     position: absolute;
-    bottom: 0;
-    right: calc(50% - min(50vw, #{rem(636)}));
-    margin-right: 8px;
+    bottom: rem(-90);
+    right: calc(50% - min(48vw, rem(636)));
     width: rem(194);
     aspect-ratio: 194 / 181;
     background-image: url(../images/top/sango_isoginntyaku.png);
@@ -45,10 +48,9 @@
 
 
 .top-about__container {
-  width: 100%;
   padding-right: 0;
-  padding-bottom: 0;
   position: initial;
+  margin-top: rem(30);
 }
 
 
@@ -56,13 +58,12 @@
 @include mq("md") {
   .top-about__container {
     padding-right: 0;
-    padding-bottom: rem(91);
     position: relative;
+    margin-top: rem(40);
   }
 }
 
 .top-about__content {
-  padding-top: rem(30);
   position: relative;
   margin: 0 auto;
 }
@@ -70,7 +71,6 @@
 /*PC画面*/
 @include mq("md") {
   .top-about__content {
-    padding-top: rem(43);
     position: relative;
   }
 }

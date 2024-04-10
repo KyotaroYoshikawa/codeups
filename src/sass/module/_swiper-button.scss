@@ -10,7 +10,7 @@
 @include mq("md") {
     .swiper-button {
         position: absolute;
-        top: rem(120);
+        top: 0;
         right: 0;
         display: flex;
     }

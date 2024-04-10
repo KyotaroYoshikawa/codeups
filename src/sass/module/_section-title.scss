@@ -2,8 +2,6 @@
 
 /*セクションブロック*/
 .section-title {
-    width: fit-content;
-    margin: 0 auto;
     text-align: center;
 }
 
@@ -17,8 +15,7 @@
     letter-spacing: 0em;
 }
 
-/*フォントアクセントカラー*/
-.section-title__accent {
+.section-title__main::first-letter{
     color: $green_accent;
 }
 
@@ -58,7 +55,7 @@
         color: $white;
     }
 
-    .section-title--w .section-title__accent{
+    .section-title--w .section-title__main::first-letter{
         color: $green2;
     }
 

@@ -1,13 +1,13 @@
 @use "global" as *;
 
 /*共通ボタン*/
-.buttom {
+.button {
     display: inline-block;
     position: relative;
 }
 
 /*ボタンずらし枠*/
-.buttom::before {
+.button::before {
     content: "";
     width: rem(202);
     padding-top: rem(52);
@@ -17,7 +17,7 @@
     border: 1px $green_accent solid;
 }
 
-.buttom__main {
+.button__main {
     width: rem(200);
     padding: rem(15) 0 rem(15) 0;
     color: $white;
@@ -31,7 +31,7 @@
 }
 
 
-.buttom__main::before {
+.button__main::before {
     content: "";
     display: inline-block;
     position: absolute;
@@ -45,11 +45,11 @@
     z-index: -1;
 }
 /*ボタンホバー*/
-.buttom__main:hover::before {
+.button__main:hover::before {
     transform: translateX(100%);
 }
 
-.buttom__main:hover{
+.button__main:hover{
     color: $green_accent;
     background-color: $white;
     transform: translateX(0);
@@ -57,7 +57,7 @@
 }
 
 /*ボタン矢印*/
-.buttom__main::after {
+.button__main::after {
     content: '';
     display: inline-block;
     width: 100%;
@@ -69,7 +69,7 @@
     margin-left: rem(8);
 }
 
-.buttom__main:hover::after{
+.button__main:hover::after{
     background-image: url(../images/common/btn_arrow_accentgreen.png);
 
 }

@@ -55,6 +55,7 @@
     font-family: $second-font-family;
     letter-spacing: 0em;
     margin-top: rem(4);
+    flex-grow: 1
 }
 
 .card-campaign__content-comment {
@@ -66,7 +67,6 @@
     font-weight: 400;
     line-height: calc(24 / 14);
     letter-spacing: 0em;
-    flex-grow: 1;
     border-top: rem(1) solid $green_accent;
 }
 

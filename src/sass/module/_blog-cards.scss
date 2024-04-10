@@ -5,28 +5,22 @@
 }
 
 .top-blog-cards__inner{
-  padding-top: rem(30);
-  display: flex;
-  flex-direction: column;
+  margin-top: rem(30);
+  display: grid;
   gap: rem(40);
-  padding-left: rem(6);
-  padding-right: rem(6);
+  grid-template-columns: repeat(1, 1fr);
 }
 
 /*PC画面======================================*/
 @include mq("md") {
 
   .top-blog-cards{
-    width: 100%;
     margin: 0 auto;
   }
 
   .top-blog-cards__inner{
-    padding-top: rem(83);
-    flex-direction: row;
+    margin-top: rem(83);
     position: relative;
-    padding-left: 0;
-    padding-right: 0;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
   }
 }

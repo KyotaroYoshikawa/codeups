@@ -2,10 +2,10 @@
 
 .top-blog{
   width: 100%;
+  padding-top: rem(80);
 }
 
 .top-blog__inner{
-  padding-top: rem(80);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -21,6 +21,7 @@
 
   .top-blog{
     position: relative;
+    padding-top: rem(100);
   }
 
   .top-blog::after{
@@ -42,7 +43,6 @@
   }
 
   .top-blog__inner{
-    padding-top: rem(100);
     max-width: initial;
   }
 

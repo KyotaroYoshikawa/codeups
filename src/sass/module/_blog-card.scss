@@ -1,7 +1,6 @@
 @use "global" as *;
 
 .blog-card{
-  width: 100%;
   background-color: $white;
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
 }
@@ -24,7 +23,7 @@
 }
 
 .blog-card__textbox{
-  margin-top: rem(21);
+  margin-top: rem(19);
 }
 
 .blog-card__date{
@@ -56,10 +55,6 @@
 
 /*PC画面======================================*/
 @include mq("md") {
-
-  .blog-card{
-    width: calc((100% - rem(80)) / 3);
-  }
 
   .blog_card__inner{
     margin-top: rem(0);

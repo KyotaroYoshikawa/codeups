@@ -9,6 +9,24 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             $('.hamburger').addClass('active');
             $('.menu-sp').fadeIn();
         }
+        // 現在のbodyタグのoverflowスタイルを確認
+        if ($("body").css("overflow") === "hidden") {
+            // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+            $("body").css({ height: "", overflow: "" });
+        } else {
+            // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+            $("body").css({ height: "100%", overflow: "hidden" });
+        }
+
+        // 現在のbodyタグのoverflowスタイルを確認
+        if ($(".head").css("overflow") === "auto") {
+            // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+            $(".head").css({ height: "100vh", overflow: "auto" });
+        } else {
+            // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+            $(".head").css({ height: "", overflow: "" });
+        }
+
     });
     /*画面幅がブレークポイントに達した時スマホメニューが開いてたら閉じる*/
     $(window).resize(function () {
@@ -27,6 +45,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             speed: 3000,
             disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
         },
+        effect: 'fade', // フェード
     });
 
     //キャンペーンページのスライダー
